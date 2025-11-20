@@ -1,0 +1,129 @@
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(90deg, #170026, #42006b, #8a006a);
+
+  /* Background Image Add Here */
+  /* background: url("bg.jpg");  */
+  
+  color: #fff;
+}
+
+/* Outer container */
+.schedule-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Header */
+.schedule-btn {
+  background: linear-gradient(90deg, #ffb300, #00ffd0);
+  border: none;
+  color: black;
+  padding: 13px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.header p {
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+/* data row */
+.date-row {
+  margin: 40px 0 25px 0;
+}
+
+.date-row h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.date-row p {
+  margin: 5px 0 0 0;
+  font-size: 15px;
+  color: #00ffe7;
+}
+
+/* Event Cards */
+.event-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto;
+  align-items: center;
+  gap: 15px;
+  transition: 0.4s;
+}
+
+.event-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.02);
+}
+
+/* Time box */
+.time {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ff9900;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+}
+
+/* Event title */
+.event-card h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Tags */
+.tag {
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.special { background: #ff8800; }
+.talk { background: #00c7a5; }
+.performance { background: #ff6b00; }
+.workshop { background: #6d6bff; }
+
+/* Location text */
+.location {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .event-card {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .tag,
+  .location {
+    justify-self: start;
+  }
+}
+
