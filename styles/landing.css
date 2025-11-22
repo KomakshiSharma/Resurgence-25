@@ -125,13 +125,8 @@
     font-size: 1.75rem;
     font-family: "google sans";
     margin-top: 20vh;
-   margin-left:  calc(20vw + 25vh);
-    /* left: 32.6vw; */
-    /* margin-left: calc(10vw + 25vh);
-    position: absolute;
-    bottom: 17.5vh;
-    z-index: 16; */
-    /* left: calc(50vw - 70px); */
+    margin-left: 0;
+    text-align: center;
     opacity: 0;
 }
 
@@ -149,13 +144,8 @@
     font-size: 1.75rem;
     font-family: "google sans";
     margin-top: 15vh;
-   margin-left:  calc(15vw + 25vh);
-    /* left: 32.6vw; */
-    /* margin-left: calc(10vw + 25vh);
-    position: absolute;
-    bottom: 17.5vh;
-    z-index: 16; */
-    /* left: calc(50vw - 70px); */
+    margin-left: 0;
+    text-align: center;
     opacity: 0;
 }
 
@@ -191,15 +181,16 @@
 }
 
 .Resurgence-landing-container {
-    width: 65%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .Resurgence-landing {
-    width: 70%;
+    width: 100%;
     height: auto;
     margin-top: 20vh;
 }
@@ -208,8 +199,7 @@
     color: white;
     text-align: center;
     font-family: "Playfair  Display,serif";
-    font-size: 3+
-    40px;
+    font-size: 40px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 3px;
@@ -218,22 +208,18 @@
 
 
 
-.landing-text > div:not(:nth-child(1)) {
-    margin-top: 4%;
-    margin-left: 50%;
+.landing-text > div{
+    margin-left: 0 !important;
 }
 
 #landing-2 {
-    font-size: 4vw;
+    font-size: 6vw;
     
 }
 
 #landing-3 {
-   
-  
-        font-size: 3+
-    40px;
-    }
+   font-size: 40px;
+}
 
 
 
@@ -366,12 +352,29 @@
     display: none;
 }
 
-
+@media all and (max-width: 900px) {
+    .Resurgence-landing-container {
+        width: 100%;
+        justify-content: center;
+   }
+    .Resurgence-landing {
+        margin-top: 15vh;
+   }
+    #landing-2 {
+        font-size: 8vw;
+   }
+    #landing-3 {
+        font-size: 6vw;
+   }
+    .mobile-register {
+        margin-top: 10vh;
+   }
+}
 
 
 @media all and (max-width: 500px) {
     .landing-wrapper {
-        background: url("../images/assets/landing-mobile.jpg");
+        background: url("../images/assets/mobile-about.jpg");
         background-size: 100% 100%;
     }
     .mousey {
@@ -433,7 +436,7 @@
         font-family: 'google sans';
 
     }
-    .oasis- {
+    .Resurgence-logo {
         width: 45%;
         left: 5%;
         top: -2.5%;
@@ -448,17 +451,26 @@
         font-size: 1.8rem;
         color: #fff;
     }
-    .oasis-landing-container {
+    .Resurgence-landing-container {
         width: 100%;
         height: 100%;
-        justify-content: space-between;
+        justify-content: center;
     }
-    .oasis-landing {
+    .Resurgence-landing {
         width: 90%;
         margin-top: 10vh;
     }
+
+    #landing-2 {
+        font-size: 10vw;
+    }
+
+    #landing-3 {
+        font-size: 8vw;
+    }
+
     .mobile-register {
-        margin-top: 0;
+        margin-top: 10vh;
         margin-bottom: 7.5vh;
     }
     .mobile-register a {
@@ -513,4 +525,4 @@
     .mobile-register a {
         font-size: 1rem;
     }
-} 
+}
