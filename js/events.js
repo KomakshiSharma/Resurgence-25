@@ -1,7 +1,3 @@
-const URL = "https://bits-oasis.org/registrations/events_details/";
-
-let ALL_EVENTS;
-
 const eventsNames = [
     'Dance',
     'Drama',
@@ -16,15 +12,249 @@ const eventsNames = [
     'Miscellaneous'
 ];
 
-function fetchEvents() {
-    fetch(URL).then(resp => resp.json())
-    .then(function(response) {
-        console.log(response);
-        ALL_EVENTS = response
-    });
-}
+const ALL_EVENTS = [
+    {
+        "category_name": "Dance",
+        "events": [
+            {
+                "name": "Nrityanjali:Flok Dance Competition",
+                "details": "Showcase your individual talent and mesmerize the audience with your moves. This is a solo dance competition.",
+                "time": "2:00 PM",
+                "venue": "Main Auditorium",
+                "date_time": "2025-11-20",
+                "contact": "Riya Sharma - 1234567890"
+            },
+            {
+                "name": "Urban Roit:Street Dance Battle",
+                "details": "Synchronize your steps and energies in this electrifying group dance competition.",
+                "time": "4:00 PM",
+                "venue": "Main Auditorium",
+                "date_time": "2025-11-20",
+                "contact": "Aarav Patel - 0987654321"
+            },
+            {
+                "name": "Aghosh:The Blindfolded Dance",
+                "details": "Synchronize your steps and energies in this electrifying group dance competition.",
+                "time": "4:00 PM",
+                "venue": "Main Auditorium",
+                "date_time": "2025-11-20",
+                "contact": "Aarav Patel - 0987654321"
+            },
+            {
+                "name": "RasRang:RasDuo Dance Competition",
+                "details": "Synchronize your steps and energies in this electrifying group dance competition.",
+                "time": "4:00 PM",
+                "venue": "Main Auditorium",
+                "date_time": "2025-11-20",
+                "contact": "Aarav Patel - 0987654321"
+            }
+        ]
+    },
+    {
+        "category_name": "Music",
+        "events": [
+            {
+                "name": "Battle of Bands",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Musical Story telling",
+                "details": "Rock the stage with your band. A competition for the best band performance.",
+                "time": "6:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Karan Gupta - 5566778899"
+            },
+            {
+                "name": "Duo Singing Competition",
+                "details": "Rock the stage with your band. A competition for the best band performance.",
+                "time": "6:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Karan Gupta - 5566778899"
+            },
+            {
+                "name": "Antakshari",
+                "details": "Rock the stage with your band. A competition for the best band performance.",
+                "time": "6:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Karan Gupta - 5566778899"
+            },
+            {
+                "name":"The Rap Battle",
+                "details": "Rock the stage with your band. A competition for the best band performance.",
+                "time": "6:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Karan Gupta - 5566778899"
+            }
+        ]
+    },
+    {
+        "category_name": "Drama",
+        "events": [
+            {
+                "name": "Eklaa Chalo",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            
+             },
+             {
+                "name": "Mime Competition",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Rangmanch-e-Sadak",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Bollymania",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+        ]       
+    },
+    {
+        "category_name": "Fine Art",
+        "events": [
+            {
+                "name": "Voices Unbound:On Spotpoetry writing",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Rangoli Competition",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },{
+                "name": "Face Painting",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },{
+                "name": "On Theme Painting",
+                "details": "Let your voice be heard! A solo singing competition for all the aspiring singers.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Model Representation",
+                "details": "Creative minds bring concepts to life! Showcase your talent in model making based on a given theme.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+        ]
+    },
+    {
+        "category_name": "Photography",
+        "events": [
+            {
+                "name": "Photography Competition",
+                "details": "Lens artists unite! Showcase your photography skills in this exciting competition.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Theme Based Video Making",
+                "details": "Creator craft your story! A video making competition based on a given theme.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+        ]
+    },
+    {
+        "category_name": "Quizzing",
+        "events": [
+            {
+                "name": "Genre Flip Challenge",
+                "details": "Artist twist genre on the spot turning classics into unexpected masterpieces.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },{
+                "name": "Hydro Thrust",
+                "details": "A Science-meet-fun challenge where quizzing meets engineering.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },{
+                "name": "Space Quiz",
+                "details": "A cosmic Showdown testing the knowledge of participants on astronomy, space exploration, and celestial phenomena.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+        ]
+    },{
+        "category_name": "Oratory",
+        "events": [
+            {
+                "name": "Behas:English debate competition",
+                "details": "A battle filed of ideas where words are weapons. Participate in this exciting English debate competition and showcase your oratory skills.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "Sansad '25:The youth parliament",
+                "details": "A real-time simulation where young minds shape imaginary policies with real conviction.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+            {
+                "name": "VicharManthan: Hindi Debate",
+                "details": "A fiery Clash of Thoughts where eloquence meets conviction in this Hindi debate competition.",
+                "time": "3:00 PM",
+                "venue": "Amphitheatre",
+                "date_time": "2025-11-21",
+                "contact": "Priya Singh - 1122334455"
+            },
+        ]
+    }
+    // Add other event categories here following the same structure
+];
 
-fetchEvents();
 
 const eventsImgUrl = [
     'images/events/dance.svg',
@@ -286,41 +516,39 @@ function viewEventDetails(eventName, eventType) {
         document.getElementById('event-details-tab').style.display = 'flex';
 
         document.getElementsByClassName('event-detail-name')[0].innerHTML = eventName;
-        ALL_EVENTS.map(event => {
-            if (event.category_name == eventType) {
-                event.events.map(eve => {
-                    if (eve.name == eventName) {
-                        if (eventName.includes('Exposure') || eventName.includes('TRIPPED: A VR Gaming Event'))
-                            changeEventData({ ...eve, date_time: '2019-10-19' })
-                        else
-                            changeEventData(eve);
-                    }
-                });
-            }
-            if (eventType == 'Miscellaneous') {
-                if (event.category_name == 'Entertainment') {
-                    event.events.map(eve => {
-                        if (eve.name == eventName) {
-                            changeEventData(eve);
-                        }
-                    });
-                }
-                if (event.category_name == 'Prereg') {
-                    event.events.map(eve => {
-                        if (eve.name == eventName) {
-                            changeEventData(eve);
-                        }
-                    });
-                }
-                if (event.category_name == 'Writing') {
-                    event.events.map(eve => {
-                        if (eve.name == eventName) {
-                            changeEventData(eve);
-                        }
-                    });
+
+        let foundEvent = null;
+
+        // Find the category that matches the eventType
+        const category = ALL_EVENTS.find(cat => cat.category_name === eventType);
+
+        if (category) {
+            // Find the event within that category
+            foundEvent = category.events.find(eve => eve.name === eventName);
+        } else if (eventType === 'Miscellaneous') {
+            // Handle Miscellaneous category by searching in others
+            const miscCategories = ['Entertainment', 'Writing']; 
+            for (const catName of miscCategories) {
+                const miscCat = ALL_EVENTS.find(cat => cat.category_name === catName);
+                if (miscCat) {
+                    foundEvent = miscCat.events.find(eve => eve.name === eventName);
+                    if (foundEvent) break;
                 }
             }
-        });
+        }
+
+        if (foundEvent) {
+            changeEventData(foundEvent);
+        } else {
+            // If no event is found, display a 'not found' message
+            changeEventData({
+                date_time: '',
+                time: 'Not Found',
+                venue: 'Not Found',
+                details: 'Details for this event could not be found.',
+                contact: ''
+            });
+        }
         
         setTimeout(() => {
             document.getElementById('event-details-tab').style.opacity = 1;
@@ -340,20 +568,17 @@ function backEventDetails() {
 }
 
 function changeEventData(event) {
-    document.querySelector('.event-day > span').innerHTML = event.date_time.substr(0, 10);
-    document.querySelector('.event-time > span').innerHTML = event.time;
-    document.querySelector('.event-venue > span').innerHTML = event.venue;
-    
-    document.querySelectorAll('.event-description')[0].innerHTML = event.details;
-    const descSpan = document.querySelectorAll('.event-description span');
-    for(i = 0; i < descSpan.length; i++) {
-        descSpan[i].style.backgroundColor = 'transparent';
-        descSpan[i].style.color = '#ffffff';
-        descSpan[i].style.fontWeight = 'initial';
+    if (!event) {
+        return;
     }
-    const parent = document.querySelectorAll('.event-contact > div')[1];
-    // parent.innerHTML = event.contact
-    parent.innerHTML = (event.contact) ? event.contact : 'NA';
+    document.querySelector('.event-day > span').innerHTML = event.date_time ? event.date_time.substr(0, 10) : 'TBA';
+    document.querySelector('.event-time > span').innerHTML = event.time || 'TBA';
+    document.querySelector('.event-venue > span').innerHTML = event.venue || 'TBA';
+    
+    document.querySelector('.event-description').innerHTML = event.details || 'No description available.';
+    
+    const contactElement = document.querySelectorAll('.event-contact > div')[1];
+    contactElement.innerHTML = event.contact || 'NA';
 }
 
 
