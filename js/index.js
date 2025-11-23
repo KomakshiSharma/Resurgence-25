@@ -1,14 +1,5 @@
 const scroll = ['home', 'about', 'videos', 'contacts'];
 
-let hue = 0;
-setInterval(() => {
-
-    hue += 0.1;
-
-    document.getElementsByClassName("landing-wrapper")[0].style.transition = "filter 5s ease";
-    document.querySelectorAll(".landing-wrapper")[0].style.filter =
-        "hue-rotate(" + hue + "turn)";
-}, 5000);
 
 var nav = document.getElementsByClassName("navigation")[0];
 
